@@ -1,0 +1,65 @@
+@import '@/styles/Main.scss';
+
+.section {
+  display: block;
+}
+
+.slider {
+  height: 100vh;
+  position: relative;
+
+  &::after {
+    background: linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.2) 20%, rgba(0,0,0,.4) 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &_item {
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -45%);
+  width: 100%;
+  max-width: 700px;
+  gap: 30px;
+}
+
+.title {
+  color: $white;
+  font: 35px $antonio;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn {
+  @include btn (
+    $bg: $main-color,
+    $bgHover: $second-color,
+    $color: $second-color,
+    $colorHover: $main-color
+  );
+  border: 0;
+
+  svg {
+    font-size: 35px;
+  }
+}

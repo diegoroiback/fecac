@@ -1,0 +1,71 @@
+// Variables
+$main-color: #FFCC4D;
+$second-color: #0A142F;
+$red: #E12839;
+$white: #fff;
+$black: #000;
+$gray1: #dfdfdf;
+$gray2: #6B7280;
+$form-bg: #222b44;
+
+$screen-sm: 450px;
+$screen-md: 750px;
+$screen-lg: 1020px;
+$screen-xl: 1300px;
+
+$inter: var(--font-inter);
+$playfair: var(--font-playfair);
+$antonio: var(--font-antonio);
+
+// Mixins
+
+@mixin container {
+  margin: auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+@mixin title (
+  $min-size: 52px,
+  $max-size: 76px,
+  $color: $second-color
+) {
+  color: $color;
+  font-size: clamp($min-size, 7vw, $max-size);
+  font-family: $antonio;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+@mixin text {
+  color: $black;
+  font: 26px $playfair;
+  font-weight: 400;
+}
+
+@mixin btn (
+  $bg: $white,
+  $bgHover: $second-color,
+  $color: $second-color,
+  $colorHover: $white
+) {
+  align-items: center;
+  background: $bg;
+  border: 1px solid $bgHover;
+  border-radius: 12px;
+  color: $color;
+  display: flex;
+  font: 25px $antonio;
+  font-weight: 700;
+  gap: 5px;
+  padding: 10px 18px 11px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .5s;
+  line-height: 1.5;
+
+  &:hover {
+    background: $bgHover;
+    color: $colorHover;
+  }
+}

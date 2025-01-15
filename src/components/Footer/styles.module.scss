@@ -1,0 +1,115 @@
+@import '@/styles/Main.scss';
+
+.footer {
+  background-color: $second-color;
+  margin-top: 100px;
+  padding: 20px 20px 60px;
+  position: relative;
+
+  @media (max-width: $screen-lg) {
+    padding-top: 80px;
+  }
+
+  &::before {
+    background: url('../../assets/footer-waves.svg') no-repeat;
+    background-position: top center;
+    background-size: 100%;
+    content: '';
+    height: 200px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: -3px;
+    width: 100%;
+  }
+}
+
+.container {
+  @include container;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: $screen-sm) {
+    justify-content: center;
+  }
+}
+
+.newsletter {
+  width: 50%;
+}
+
+.logo {
+  margin-top: -150px;
+  width: 40%;
+
+  @media (max-width: $screen-sm) {
+    order: -1;
+    width: 80%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  width: 100%;
+
+  &_link {
+    color: $white;
+    font-size: 25px;
+    transition: all .5s;
+
+    &:hover {
+      color: $main-color;
+    }
+  }
+}
+
+.social {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin: 30px 0;
+  width: 100%;
+
+  &_link {
+    align-items: center;
+    background: transparent;
+    border: 2px solid rgba($white, .2);
+    border-radius: 8px;
+    color: $white;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    padding: 7px;
+    transition: all .5s;
+
+    &:hover {
+      background: rgba($white, .3);
+    }
+  }
+}
+
+.rights {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &_text {
+    color: $white;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,78 @@
+@import '@/styles/Main.scss';
+
+.section {
+  display: block;
+  padding: 100px 20px 150px;
+}
+
+.container {
+  @include container;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $screen-md) {
+    width: 35%;
+  }
+
+  @media (max-width: $screen-sm) {
+    &::before {
+      display: none;
+    }
+  }
+
+  img {
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    border: 2px solid $red;
+    content: '';
+    height: 100%;
+    left: 50px;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    border-radius: 12px;
+  }
+}
+
+.content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+
+  @media (min-width: $screen-md) {
+    width: 50%;
+  }
+}
+
+.title {
+  @include title;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.text {
+  @include text;
+}
+
+.btn {
+  @include btn;
+
+  svg {
+    font-size: 35px;
+  }
+}

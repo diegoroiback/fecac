@@ -1,0 +1,111 @@
+@import '@/styles/Main.scss';
+
+.section {
+  background-color: $main-color;
+  display: block;
+  padding: 100px 20px 220px;
+  position: relative;
+
+  @media (max-width: $screen-sm) {
+    padding-bottom: 150px;
+  }
+
+  &::after {
+    background: url('../../../assets/waves4.svg') no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
+    bottom: -3px;
+    content: '';
+    height: 300px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+  }
+}
+.container {
+  @include container;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: space-between;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: $screen-md) {
+    order: 2;
+    width: 35%;
+  }
+
+  @media (max-width: $screen-sm) {
+    &::before {
+      display: none;
+    }
+  }
+
+  img {
+    border-radius: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    border: 2px solid $red;
+    border-radius: 12px;
+    content: '';
+    height: 100%;
+    left: -50px;
+    position: absolute;
+    top: -50px;
+    width: 100%;
+  }
+}
+
+.content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+
+  @media (min-width: $screen-md) {
+    width: 50%;
+  }
+}
+
+.title {
+  @include title;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+.subtitle {
+  @include title (
+    $min-size: 41px,
+    $max-size: 56px,
+    $color: $white
+  );
+}
+
+.text {
+  @include text;
+}
+
+.btn {
+  @include btn (
+    $bg: $second-color,
+    $bgHover: $white,
+    $color: $white,
+    $colorHover: $second-color
+  );
+  border: 0;
+
+  svg {
+    font-size: 35px;
+  }
+}

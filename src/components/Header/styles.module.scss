@@ -1,0 +1,27 @@
+@import '@/styles/Main.scss';
+
+.section {
+  background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+  left: 0;
+  padding: 30px 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1300px;
+  width: 100%;
+}
+
+.logo {
+  img {
+    width: 70px;
+  }
+}

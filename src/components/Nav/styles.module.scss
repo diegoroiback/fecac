@@ -1,0 +1,124 @@
+@import '@/styles/Main.scss';
+
+.nav {
+  display: flex;
+  width: 90%;
+}
+
+.list {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+
+  @media (max-width: $screen-lg) {
+    align-items: center;
+    background-color: $second-color;
+    flex-direction: column;
+    gap: 0;
+    height: 100%;
+    justify-content: center;
+    right: -150%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &_active {
+      right: 0;
+    }
+  }
+}
+
+.item {
+  padding: 10px 0;
+  position: relative;
+
+  &:hover {
+    .dropdown {
+      display: flex;
+    }
+  }
+}
+
+.menu_btn {
+  align-items: flex-end;
+  background: transparent;
+  border: 0;
+  display: none;
+  flex-direction: column;
+  gap: 7px;
+
+  @media (max-width: $screen-lg) {
+    display: flex;
+  }
+
+  span {
+    background-color: $white;
+    height: 2px;
+    width: 25px;
+
+    &:nth-child(2) {
+      width: 20px;
+    }
+  }
+}
+
+.link {
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: 12px;
+  color: $white;
+  display: flex;
+  font: 15px $inter;
+  font-weight: 700;
+  gap: 10px;
+  padding: 12px;
+  transition: all .5s;
+
+  &:hover {
+    background-color: $white;
+    color: $black;
+  }
+
+  svg {
+    font-size: 20px;
+  }
+}
+
+.dropdown {
+  background-color: $white;
+  border-radius: 12px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 230px;
+  padding: 7px;
+  position: absolute;
+  top: 99%;
+
+  @media (max-width: $screen-lg) {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  &_link {
+    align-items: center;
+    border-radius: 8px;
+    color: $gray2;
+    display: flex;
+    font: 15px $inter;
+    font-weight: 600;
+    gap: 5px;
+    padding: 10px;
+    transition: all .5s;
+
+    svg {
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: $gray1;
+    }
+  }
+}

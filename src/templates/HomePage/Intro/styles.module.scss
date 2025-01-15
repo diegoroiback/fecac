@@ -1,0 +1,51 @@
+@import '@/styles/Main.scss';
+
+.section {
+  display: block;
+  padding: 100px 20px 50px;
+}
+
+.container {
+  @include container;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.image {
+  width: 100%;
+
+  @media (min-width: $screen-md) {
+    width: 35%;
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: flex-start;
+
+  @media (min-width: $screen-md) {
+    width: 60%;
+  }
+}
+
+.title {
+  @include title;
+}
+
+.text {
+  @include text;
+}
+
+.btn {
+  @include btn;
+
+  svg {
+    font-size: 35px;
+  }
+}
