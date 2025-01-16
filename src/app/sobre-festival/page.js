@@ -1,9 +1,9 @@
-import QSomosPage from '@/templates/QSomosPage/Index'
+import SobreFestivalPage from '@/templates/SobreFestivalPage/Index'
 
 export default function Home() {
   return (
     <>
-      <QSomosPage />
+      <SobreFestivalPage />
     </>
   );
 }

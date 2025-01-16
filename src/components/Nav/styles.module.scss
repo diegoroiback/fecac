@@ -5,6 +5,22 @@
   width: 90%;
 }
 
+.close_btn {
+  background: transparent;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  display: none;
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+
+  @media (max-width: $screen-lg) {
+    display: flex;
+  }
+}
+
 .list {
   display: flex;
   gap: 20px;
@@ -17,9 +33,10 @@
     gap: 0;
     height: 100%;
     justify-content: center;
-    right: -150%;
     position: fixed;
+    right: -150%;
     top: 0;
+    transition: right .5s;
     width: 100%;
 
     &_active {
@@ -34,7 +51,9 @@
 
   &:hover {
     .dropdown {
-      display: flex;
+      @media (min-width: $screen-lg) {
+        display: flex;
+      }
     }
   }
 }
@@ -43,6 +62,7 @@
   align-items: flex-end;
   background: transparent;
   border: 0;
+  cursor: pointer;
   display: none;
   flex-direction: column;
   gap: 7px;
@@ -54,6 +74,7 @@
   span {
     background-color: $white;
     height: 2px;
+    pointer-events: none;
     width: 25px;
 
     &:nth-child(2) {
@@ -95,6 +116,10 @@
   padding: 7px;
   position: absolute;
   top: 99%;
+
+  &_active {
+    display: flex;
+  }
 
   @media (max-width: $screen-lg) {
     left: 50%;

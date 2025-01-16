@@ -1,5 +1,7 @@
 import React from 'react'
 import Nav from '@/components/Nav/Nav'
+import Link from 'next/link'
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
 
 import styles from './styles.module.scss'
 
@@ -9,9 +11,12 @@ const Header = () => {
       <div className={styles.container}>
         <Nav />
         <div className={styles.logo}>
-          <img src="/images/logo-fecac-header.png" alt="" />
+          <Link href='/'>
+            <img src="/images/logo-fecac-header.png" alt="" />
+          </Link>
         </div>
       </div>
+      <ScrollToTop />
     </header>
   )
 }

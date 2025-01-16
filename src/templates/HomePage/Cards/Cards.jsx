@@ -30,9 +30,17 @@ const Cards = () => {
               delay: 5000,
               disableOnInteraction: false,
             }}
-            slidesPerView={3}
+            slidesPerView={1}
             navigation
             scrollbar={{ draggable: true }}
+            breakpoints={{
+              1100: {
+                slidesPerView: 3
+              },
+              500: {
+                slidesPerView: 2,
+              },
+            }}
           >
             {Flavors.map((item, index) => (
               <SwiperSlide key={index}>

@@ -13,7 +13,7 @@ const Experiences = () => {
           <div className={styles.content}>
             <h3 className={styles.name}>Juan Carlos</h3>
             <p className={styles.text}>
-            El amor por la cerveza ha llevado a Joana a cruzar fronteras, explorando y aprendiendo de la cultura cervecera en diferentes rincones del mundo. Este proyecto es la culminación de su sueño: convertir la ciudad en un referente para los amantes de la cerveza artesanal.</p>
+            Con años de experiencia en el mundo de la gastronomía, Juan Carlos  ha trabajado con diversos restaurantes, aportando creatividad e innovación a la mesa. Su pasión por los sabores y la cocina lo convierten en un pilar fundamental para llevar el festival a otro nivel.</p>
           </div>
           <div className={styles.img}>
             <img src="/images/experiencia.jpg" alt="" />

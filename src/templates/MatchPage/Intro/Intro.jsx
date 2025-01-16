@@ -4,10 +4,10 @@ const Intro = () => {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <div className={styles.image}>
+        <div className={styles.image} data-aos="zoom-in-up">
           <img src='/images/match.png' alt="" />
         </div>
-        <h1 className={styles.title}>Cerveza artesanal + comida</h1>
+        <h1 className={styles.title} data-aos="zoom-in-up">Cerveza artesanal + comida</h1>
       </div>
     </div>
   )

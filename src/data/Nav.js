@@ -9,15 +9,19 @@ export const NavHeader = [
     dropdown: [
       {
         text2: 'Sobre el Festival',
-        url2: '/',
+        url2: '/sobre-festival',
       },
       {
         text2: 'Areas de Experiencia',
+        url2: '/experiencia',
+      },
+      {
+        text2: 'Mapa de festival',
         url2: '/',
       },
       {
         text2: 'Match',
-        url2: '/',
+        url2: '/match',
       },
     ]
   },
@@ -26,13 +30,29 @@ export const NavHeader = [
     url: '/',
   },
   {
-    text: 'Reconocimientos',
+    text: 'Categorias y Premios',
     url: '/',
     dropdown: [
       {
-        text2: 'Reconocimientos',
+        text2: 'Categorias',
         url2: '/',
-      }
+      },
+      {
+        text2: 'Elegibilidad',
+        url2: '/',
+      },
+      {
+        text2: 'Premios',
+        url2: '/',
+      },
+      {
+        text2: 'Panel Evaluador',
+        url2: '/',
+      },
+      {
+        text2: 'Registrate',
+        url2: '/',
+      },
     ]
   },
   {
